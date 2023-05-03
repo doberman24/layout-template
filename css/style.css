@@ -1,0 +1,83 @@
+header {
+    /* background-color: #f7f7f7; */
+    background: linear-gradient(90deg, #f7f7f7, #fcfcfc);
+}
+
+nav {
+    font-size: 16px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav a {
+    color: #26272d;
+    text-decoration: none;
+    margin-right: 25px;
+}
+
+nav div {
+    display: inline-block;
+}
+
+.menu {
+    position: relative;
+    top: 4px;
+    margin-right: 30px;
+}
+
+.menu_left {
+    text-align: left;
+}
+
+.main_name {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 60px 200px 60px 140px;
+}
+
+.main_name strong {
+    font-weight: 890;
+}
+
+.menu_right {
+    text-align: right;
+}
+
+.help {
+    color: #9f9fa1;
+}
+
+.menu_right button {
+    position: relative;
+    width: 122px;
+    text-align: right;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    background-color: #267df4;
+    padding: 14px 16px;
+    border-radius: 25px;
+}
+
+.get_app img {
+display: inline-block;
+position: absolute;
+top: 12px;
+left: 10px;
+}
+
+.menu_right button:hover {
+    box-shadow: 0 0 3px #267df4;
+}
+
+.menu_right button:active {
+    background-color: #1f61bd;
+    box-shadow: 0 0 6px #1f61bd;
+}
+
+.main_view {
+    background: url(../img/banner_background.jpg) no-repeat center;
+    background-size: cover;
+    filter: brightness(99%);
+    height: 845%;
+}
