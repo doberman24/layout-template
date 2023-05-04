@@ -1,6 +1,9 @@
 header {
     /* background-color: #f7f7f7; */
     background: linear-gradient(90deg, #f3f3f3, #fcfcfc);
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 nav {
@@ -95,6 +98,7 @@ left: 10px;
     filter: brightness(99%);
     height: 842px;
     text-align: center;
+    overflow: hidden;
 }
 
 .head_main {
@@ -106,6 +110,9 @@ left: 10px;
     padding-top: 70px;
     padding-bottom: 15px;
     font-size: 65px;
+    opacity: 0;
+    position: relative;
+    animation: vis_header 800ms linear forwards;
 }
 
 .head_main p {
@@ -113,6 +120,9 @@ left: 10px;
     font-size: 19px;
     width: 780px;
     padding-bottom: 65px;
+    opacity: 0;
+    position: relative;
+    animation: vis_header 500ms linear 300ms forwards;
 }
 
 .btn_video .btn_play {
@@ -143,14 +153,20 @@ left: 10px;
 
 .btn_video {
     padding-bottom: 55px;
+    opacity: 0;
+    position: relative;
+    animation: vis_header 400ms linear 400ms forwards;
 }
 
 .tel_display {
     display: inline-block;
+    position: relative;
     background: url(../img/tel.png) no-repeat center top;
     width: 370px;
-    height: 444px;
+    height: 755px;
     color: #26272d;
+    opacity: 0;
+    animation: vis_tel_dispaly 600ms linear 300ms forwards;
 }
 
 .menu_tel h4 {
@@ -218,3 +234,75 @@ sup {
     right: 7px;
     top: 3px;
 }
+
+@keyframes vis_tel_dispaly {
+    from {
+        opacity: 0;
+        top: 444px;
+    }
+    to {
+        opacity: 100%;
+        top: 0;
+    }
+}
+
+@keyframes vis_header {
+    from {
+        opacity: 0;
+        top: 80px;
+    }
+    to {
+        opacity: 100%;
+        top: 0;
+    }
+}
+
+.description {
+    height: 540px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    vertical-align: top;
+    overflow: hidden;
+}
+
+.description div {
+    display: inline-block;
+    margin-top: 100px;
+    width: 500px;
+    text-align: left;
+    color: #8c8f94;
+    vertical-align: top;
+    font-size: 17px;
+    line-height: 1.4em;
+    position: relative;
+    animation: vis_dis 800ms linear forwards;
+}
+.description h3 {
+    font-size: 23px;
+    margin-top: 40px;
+    margin-bottom: 53px;
+    color: #26272d;
+}
+
+.description p {
+    margin-bottom: 30px;
+}
+
+.left_col {
+    margin-right: 110px;
+}
+
+@keyframes vis_dis {
+    from {
+        opacity: 0;
+        top: 400px;
+    }
+    20% {
+        top: 300px;
+    }
+    to {
+        opacity: 100%;
+        top: 0;
+    }
+}
+
