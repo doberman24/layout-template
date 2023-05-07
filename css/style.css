@@ -81,19 +81,21 @@ top: 12px;
 left: 10px;
 }
 
-.menu_right button:hover {
+.menu_right button:hover,
+.crack:hover {
     box-shadow: 0 0 3px #267df4;
     cursor: pointer;
 }
 
-.menu_right button:active {
+.menu_right button:active,
+.crack:active {
     background-color: #1f61bd;
     box-shadow: 0 0 6px #1f61bd;
 }
 
 .main_view {
     font-family: Arial, Helvetica, sans-serif;   
-    background: url(../img/banner_background.jpg) no-repeat center;
+    background: url(../img/banner_background.jpg) no-repeat bottom;
     background-size: cover;
     filter: brightness(99%);
     height: 842px;
@@ -137,11 +139,13 @@ left: 10px;
 
 }
 
-.btn_play:hover {
+.btn_play:hover,
+.more_info:hover {
     box-shadow: 0 0 5px #dadcde;
     cursor: pointer;
 }
-.btn_play:active {
+.btn_play:active,
+.more_info:active {
     box-shadow: 0 0 15px #bbbcbd;
 }
 
@@ -306,3 +310,63 @@ sup {
     }
 }
 
+.description_2 {
+    height: 940px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.description_2 div {
+    display: inline-block;
+    margin-top: 162px;
+    vertical-align: top;
+}
+
+.vis_tel {
+    position: relative;
+    animation: visible_tel 800ms linear;
+}
+
+.artic p {
+    margin-bottom: 45px;
+    color: #8c8f94;
+    font-size: 17px;
+    line-height: 1.4em;
+
+}
+.artic {
+    width: 460px;
+    margin-left: 100px;
+}
+.artic h3 {
+    color: #26272d;
+    font-size: 65px;
+    margin-bottom: 90px;
+}
+
+.artic button {
+    margin-top: 35px;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.crack {
+    color: #fff;
+    border: none;
+    background: #267df4 url(../img/rightarrow.png) no-repeat 92%;
+    background-size: 14px;
+    padding: 15px 55px 15px 25px;
+}
+.more_info {
+    padding: 14px 24px;
+    margin-left: 18px;
+    border: solid 2px #e9eaeb;
+    background-color: transparent;
+}
+
+
+
+@keyframes visible_tel {
+    from { right: 900px; }
+    to { right: 0; }
+}
