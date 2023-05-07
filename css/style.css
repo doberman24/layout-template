@@ -313,34 +313,44 @@ sup {
 .description_2 {
     height: 940px;
     font-family: Arial, Helvetica, sans-serif;
+    white-space: nowrap;
 }
 
 .description_2 div {
     display: inline-block;
     margin-top: 162px;
     vertical-align: top;
+    text-align: left;
 }
 
 .vis_tel {
+    background: url(../img/iphone-feature.png) no-repeat right bottom;
+    width: 50%;
+    height: 800px;
     position: relative;
     animation: visible_tel 800ms linear;
 }
 
-.artic p {
-    margin-bottom: 45px;
+.artic p,
+.artic_place p {
+    margin-bottom: 40px;
     color: #8c8f94;
     font-size: 17px;
     line-height: 1.4em;
 
 }
 .artic {
+    padding-top: 50px;
     width: 460px;
     margin-left: 100px;
+    margin-right: 320px;
+    white-space: normal;
 }
-.artic h3 {
+.artic h3,
+.artic_place h3 {
     color: #26272d;
     font-size: 65px;
-    margin-bottom: 90px;
+    margin-bottom: 80px;
 }
 
 .artic button {
@@ -364,9 +374,56 @@ sup {
     background-color: transparent;
 }
 
-
-
 @keyframes visible_tel {
     from { right: 900px; }
     to { right: 0; }
+}
+
+.description_place {
+    margin-top: 280px;
+    height: 780px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+}
+.description_place div {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    vertical-align: top;
+    text-align: left;
+}
+
+.artic_place {
+    width: 470px;
+    white-space: normal;
+    margin-left: 18vw;
+}
+
+.place_on_map {
+    background: url(../img/map.png) left no-repeat;
+    background-size: 1050px;
+    background-position-y: 40px;
+    margin-left: 70px;
+    width: 975px;
+    height: 600px;
+    position: relative;
+
+    animation: map 800ms linear;
+}
+
+.artic_place h2 {
+    text-transform: uppercase;
+    font-size: small;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    padding-top: 30px;
+}
+.res img {
+    margin-top: 30px;
+    margin-right: 30px;
+}
+
+@keyframes map {
+    from { left: 1000px; }
+    to { left: 0; }
 }
