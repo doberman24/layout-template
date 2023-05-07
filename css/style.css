@@ -1,5 +1,21 @@
+/* Граница фокуса на активном элементе */
+
+input:focus,
+button:focus {
+    outline: #c6c9cf solid 1px;
+    box-shadow: 0 0 6px rgb(138, 138, 138);
+}
+
+a:focus {
+    border-radius: 5px;
+    outline: #c6c9cf solid 1px;
+    box-shadow: 0 0 6px rgb(138, 138, 138);
+}
+
+
+/* Хедер странницы с меню навигацией */
+
 header {
-    /* background-color: #f7f7f7; */
     background: linear-gradient(90deg, #f3f3f3, #fcfcfc);
     position: sticky;
     top: 0;
@@ -50,8 +66,9 @@ nav div {
     margin: 60px 200px 60px 140px;
 }
 
-.main_name strong {
-    font-weight: 890;
+.main_name strong,
+.send_mess strong {
+    font-weight: 900;
 }
 
 .menu_right {
@@ -92,6 +109,9 @@ left: 10px;
     background-color: #1f61bd;
     box-shadow: 0 0 6px #1f61bd;
 }
+
+
+/* Main - начало. Первый экран. Первая section */
 
 .main_view {
     font-family: Arial, Helvetica, sans-serif;   
@@ -161,6 +181,9 @@ left: 10px;
     position: relative;
     animation: vis_header 400ms linear 400ms forwards;
 }
+
+
+/* Формирование дисплея телефона вручную */
 
 .tel_display {
     display: inline-block;
@@ -261,6 +284,8 @@ sup {
     }
 }
 
+/* 2 экран. Section с описанием контента */
+
 .description {
     height: 540px;
     text-align: center;
@@ -310,6 +335,8 @@ sup {
     }
 }
 
+/* 3 экран. Section со статьей с доп. описанием контента */
+
 .description_2 {
     height: 940px;
     font-family: Arial, Helvetica, sans-serif;
@@ -347,7 +374,9 @@ sup {
     white-space: normal;
 }
 .artic h3,
-.artic_place h3 {
+.artic_place h3,
+.interface h3,
+.interface h1 {
     color: #26272d;
     font-size: 65px;
     margin-bottom: 80px;
@@ -379,6 +408,8 @@ sup {
     to { right: 0; }
 }
 
+/* 4 экран. Section с описанием и картой расположения */
+
 .description_place {
     margin-top: 280px;
     height: 780px;
@@ -407,7 +438,6 @@ sup {
     width: 975px;
     height: 600px;
     position: relative;
-
     animation: map 800ms linear;
 }
 
@@ -426,4 +456,133 @@ sup {
 @keyframes map {
     from { left: 1000px; }
     to { left: 0; }
+}
+
+/* 5 экран. Section  с демонстрацией интерфейса и отправкой email */
+
+.interface {
+    background-color: #f5f5f8;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #8c8f94;
+}
+
+.interface_head h1 {
+    padding-top: 150px;
+    margin-bottom: 35px;
+}
+
+.div_bord {
+    border-top: #267df4 solid 2px;
+    width: 50px;
+    display: inline-block;
+
+}
+.screen {
+    white-space: nowrap;
+}
+.screen img {
+    vertical-align: middle;
+    padding: 7px;
+    animation: vis_screen 800ms linear;
+
+}
+.screen h4 {
+    padding-top: 35px;
+    padding-bottom: 30px;
+    text-transform: uppercase;
+    font-size: small;
+    font-weight: bold;
+}
+
+.send_mess {
+    padding-bottom: 130px;
+}
+
+.send_mess h4,
+.send_mess h5 {
+    margin-top: 160px;
+    text-transform: uppercase;
+    font-size: small;
+    margin-bottom: 30px;
+}
+.send_mess h3 {
+    margin-bottom: 50px;
+}
+.send_mess h5 {
+    margin-top: 65px;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+}
+
+.input_email {
+    position: relative;
+    display: inline-block;
+}
+.input_email input {
+    border: solid 2px #e9eaeb;
+    width: 700px;
+    height: 50px;
+    font-size: 16px;
+    background-color: transparent;
+    padding-left: 25px;
+    border-radius: 30px;
+}
+.send_email {
+    border: none;
+    position: absolute;
+    background: #6fc754 url(../img/rightarrow.png) 215px no-repeat;
+    background-size: 14px;
+    font-size: 16px;
+    text-align: left;
+    color: #fff;
+    padding-left: 20px;
+    border-radius: 30px;
+    width: 250px;
+    height: 46px;
+    left: 476px;
+    top: 5px;
+}
+.send_email:hover {
+    box-shadow: 0 0 6px #6fc754;
+    cursor: pointer;
+}
+.send_email:active {
+    background-color: #5ca748;
+    box-shadow: 0 0 12px #6fc754;
+}
+
+.download {
+    border: none;
+    position: relative;
+    background-color: #131315;
+    color: #fff;
+    width: 210px;
+    height: 60px;
+    text-align: left;
+    padding-left: 70px;
+    padding-right: 25px;
+    border-radius: 30px;
+}
+.download b {
+    font-size: 23px;
+    font-weight: bold;
+}
+.download img {
+    position: absolute;
+    left: 20px;
+    top: 8px;
+}
+.download:hover {
+    box-shadow: 0 0 3px #131315;
+    cursor: pointer;
+}
+.download:active {
+    box-shadow: 0 0 10px #131315;
+    text-shadow: 0 0 3px #fff;
+}
+
+@keyframes vis_screen {
+    from {opacity: 0;}
+    to {opacity: 100%;}
 }
