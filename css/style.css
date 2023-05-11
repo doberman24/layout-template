@@ -306,7 +306,8 @@ sup {
     position: relative;
     animation: vis_dis 800ms linear forwards;
 }
-.description h3 {
+.description h3,
+.feedback h3 {
     font-size: 23px;
     margin-top: 40px;
     margin-bottom: 53px;
@@ -359,7 +360,8 @@ sup {
 }
 
 .artic p,
-.artic_place p {
+.artic_place p,
+.feedback p {
     margin-bottom: 40px;
     color: #8c8f94;
     font-size: 17px;
@@ -441,7 +443,8 @@ sup {
     animation: map 800ms linear;
 }
 
-.artic_place h2 {
+.artic_place h2,
+.name {
     text-transform: uppercase;
     font-size: small;
     font-weight: bold;
@@ -458,7 +461,7 @@ sup {
     to { left: 0; }
 }
 
-/* 5 экран. Section  с демонстрацией интерфейса и отправкой email */
+/* 5 экран. Section с демонстрацией интерфейса и отправкой email */
 
 .interface {
     background-color: #f5f5f8;
@@ -586,3 +589,99 @@ sup {
     from {opacity: 0;}
     to {opacity: 100%;}
 }
+
+.feedback {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 130px;
+}
+
+.comments {
+    display: inline-block;
+    width: 600px;
+    white-space: nowrap;
+    overflow: hidden;
+    
+}
+.comment_1,
+.comment_2,
+.comment_3 {
+    position: relative;
+    white-space: normal;
+    display: inline-block;
+    width: 600px;
+    animation: comment_begin 15s linear 4.5s forwards infinite
+}
+
+.photos {
+    margin-top: 125px;
+    margin-bottom: 90px;
+}
+
+.photos > img {
+    margin-left: 55px;
+    margin-right: 55px;
+    border-radius: 50%;
+    filter: opacity(20%) ;
+}
+
+.photos img[alt="user1"] {
+    transform: scale(1.3);
+    filter: opacity(100%);
+    animation: user1_focus 15s linear 4.5s infinite;
+}
+.photos img[alt="user2"] {
+    animation: user2_focus 15s linear 4.5s infinite;
+}
+.photos img[alt="user3"] {
+    animation: user3_focus 15s linear 4.5s infinite;
+}
+
+.photos img {
+    vertical-align: middle;
+}
+
+.photos .arrow {
+    background: none;
+    margin-bottom: 20px;
+    border: none;
+    filter: opacity(50%);
+}
+
+@keyframes comment_begin {
+    from {right: 0;}
+    1% {right: 300px;}
+    2% {right: 606px;}
+    35% {right: 606px;}
+    36% {right: 900px;}
+    37% {right: 1212px;}
+    68% {right: 1212px;}
+    69% {right: 1500px;}
+    70% {right: 1818px;}
+    to {right: 1818px;}
+}
+@keyframes user1_focus {
+    from { transform: scale(1.3);filter: opacity(100%);}
+    2% {transform: scale(1.0);filter: opacity(20%);}
+    68% {transform: scale(1.0);filter: opacity(20%);}
+    70% {transform: scale(1.3);filter: opacity(100%);}
+    to {transform: scale(1.3);filter: opacity(100%);}
+}
+@keyframes user2_focus {
+    from { transform: scale(1.0);filter: opacity(20%);}
+    2% {transform: scale(1.3);filter: opacity(100%);}
+    35% {transform: scale(1.3);filter: opacity(100%);}
+    37% {transform: scale(1.0);filter: opacity(20%);}
+    to {transform: scale(1.0);filter: opacity(20%);}
+}
+@keyframes user3_focus {
+    from { transform: scale(1.0);filter: opacity(20%);}
+    35% {transform: scale(1.0);filter: opacity(20%);}
+    37% {transform: scale(1.3);filter: opacity(100%);}
+    68% {transform: scale(1.3);filter: opacity(100%);}
+    70% {transform: scale(1.0);filter: opacity(20%);}
+    to {transform: scale(1.0);filter: opacity(20%);}
+}
+
+
+
